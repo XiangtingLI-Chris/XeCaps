@@ -1,15 +1,21 @@
 {
     "compilerOptions": {
-        "esModuleInterop": true,
-        "noImplicitAny": true,
-        "noEmit": true,
-        "resolveJsonModule": true,
-        "allowJs": true,
-        "target": "es2015",
-        "module": "commonjs"
+      "esModuleInterop": true,
+      "noImplicitAny": true,
+      "noEmit": true,
+      "resolveJsonModule": true,
+      "allowJs": true,
+      "target": "es2015",
+      "module": "commonjs"
     },
-    "exclude": [
-        "**/**_broken.ts"
+    "include": [
+      "src/**/*.ts"
     ],
+    "exclude": [
+      "node_modules",
+      "codeToAdapt/**/*",
+      "tests/http/requestHelpers.ts",
+      "tests/http/adminMissionTransfer.test.ts",
+      "**/**_broken.ts"
+    ]
 }
-  
