@@ -1,4 +1,4 @@
-# ✨ 👨‍🚀 XeCaps - Space Mission Control Backend 👩‍🚀 ✨
+# XeCaps - Space Mission Control Backend
 
 This is a **TypeScript/Express** backend for managing space mission planning, including:
 - user authentication
@@ -38,6 +38,8 @@ This is a **TypeScript/Express** backend for managing space mission planning, in
 
 ## Architecture
 
+The backend is organised by feature area, with `server.ts` acting as the HTTP routing layer and the remaining modules containing domain-specific business logic.
+
 ```txt
 src/
 ├── server.ts          # Express routes and HTTP layer
@@ -54,26 +56,85 @@ src/
 
 ## Getting Started
 
+Follow the steps below to run the backend server locally.
+
+### 1. Install dependecies
+
+Install all required Node.js dependencies:
+
 ```bash
 npm install
-cp .env.example .env.local
-num run start-dev
 ```
-Then open:
+
+### 2. Configure environment variables
+
+Create a local environment file from the example template:
+
+```bash
+cp .env.example .env.local
+```
+
+Or on Windows PowerShell, use:
+
+```Power Shell
+Copy-Item .env.example .env.local
+```
+
+Then open `.env.local` and add your own OpenRouter API key if you want to use the LLM-powered astronaut chat feature:
+
+```env
+OPENROUTER_API_KEY=<replace_with_your_openrouter_api_key_here>
+```
+
+### 3. Start the development server
+
+Run the backend server in development mode:
+
+```bash
+npm run start-dev
+```
+
+### 4. Open the API documentation
+
+After the server starts, open the Swagger documentation in your browser:
+
 ```
 http://127.0.0.1:3200/docs
-```
-
-### Environment Variables
-
-Please fill in your own openrouter api key in `.env.local`. You can refer to the example in `.env.example`:
-```env
-OPENROUTER_API_KEY=
 ```
 
 ---
 
 ## Testing
+
+This project includes static checks, TypeScript compilation checks, and Jest-based automated tests.
+
+### Run linting
+
+Check code style and optential linting issues:
+
+```bash
+npm run lint
+```
+
+### Run TypeScript compilation check
+
+Verify that the TypeScript code compiles successfully:
+
+```bash
+npm run tsc
+```
+
+### Run automated tests
+
+Run the Jest test suite:
+
+```bash
+npm test
+```
+
+### Recommended verification workflow
+
+Before committing changes, run the following commands in order:
 
 ```bash
 npm run lint
@@ -95,14 +156,18 @@ npm test
 
 ## Course Context and Attribution
 
-This project was This project was originally developed as a group backend project for UNSW College DPST1093. The public version has been cleaned and reorganised for portfolio use after the course project changed. Course-provided starter/adaptation code is either removed or clearly separated from implemented project code.
+XeCaps was originally developed as a group backend project for UNSW College DPST1093.
+
+This public version has been cleaned and reorganised for portfolio and learning purposes after the course was completed. Course-provided starter or adaptation code is either removed, clearly separated, or not listed as part of my personal contributions.
+
+The contribution details below are included to transparently distinguish individual work from collaborative group work and course-provided scaffolding.
 
 ### Original Team
 
 | Member | Main Contributions |
 | ------ | ------------------ |
-| Yulin Guo / Alan | ... |
+| Yulin Guo / Alan | To be completed |
 | Xiangting Li / Chris | Admin registration, mission information, astronaut assignment/unassignment, launchVehicle list, corresponding API interface layer, tests, core data structure design |
-| Yuchen Wang / Eric | ... |
-| You Wu / William | ... |
-| Zhen Cao / Zhen | ... |
+| Yuchen Wang / Eric | To be completed |
+| You Wu / William | To be completed |
+| Zhen Cao / Zhen | To be completed |
