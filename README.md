@@ -170,8 +170,8 @@ The contribution details below are included to transparently distinguish individ
 
 | Member | Main Contributions |
 | ------ | ------------------ |
-| Yulin Guo / Alan | To be completed |
+| Yulin Guo / Alan | Developed user and mission update features, including retrieving user details, updating mission names, and updating mission descriptions. Also implemented astronaut profile editing functionality. |
 | Xiangting Li / Chris | Admin registration, mission information, astronaut assignment/unassignment, launchVehicle list, corresponding API interface layer, tests, core data structure design |
-| Yuchen Wang / Eric | To be completed |
-| You Wu / William | To be completed |
-| Zhen Cao / Zhen | To be completed |
+| Yuchen Wang / Eric | Developed authentication and mission management features, including user login, user logout, mission list retrieval, and mission deletion. Also implemented astronaut pool retrieval functionality. |
+| You Wu / William | Developed account management features, including updating user details and user passwords. Also contributed to astronaut detail retrieval by ID. |
+| Zhen Cao / Zhen | Developed core mission management features, including creating missions, clearing system data, and updating mission targets. Also contributed to astronaut creation functionality. |
